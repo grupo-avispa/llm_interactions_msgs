@@ -1,0 +1,10 @@
+# Request parameters 
+string user_name            # Interacting user's name
+string user_query           # Input query from the user
+---
+# Response parameters
+string response_text        # Generated response to the user's query
+float32 elapsed_time          # Time taken to generate the response in seconds
+---
+# Feedback parameters
+string status               # Status of the feedback (e.g., "completed", "failed")
