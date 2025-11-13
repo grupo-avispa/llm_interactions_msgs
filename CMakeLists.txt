@@ -50,16 +50,22 @@ endif()
 ## Find ament macros and libraries
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 
 ################################################
 ## Declare ROS messages, services and actions ##
 ################################################
+set(service_files
+  "srv/UserQueryResponse.srv"
+)
 set(action_files
   "action/UserQueryResponse.action"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${action_files}
+  ${service_files}
+  DEPENDENCIES std_msgs
 )
 
 ###########

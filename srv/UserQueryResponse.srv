@@ -1,0 +1,9 @@
+# Request / response service to perform IA interaction
+
+# ID of the user
+string user_name
+# Input query from the user
+string user_query
+---
+# Generated response to the user's query
+string response_text
