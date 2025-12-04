@@ -1,0 +1,9 @@
+# Request / response service 
+
+# Input query to the agent
+string query
+# Indicate if a response is needed from the agent
+bool response_needed
+---
+# Generated response to the agent
+string agent_response

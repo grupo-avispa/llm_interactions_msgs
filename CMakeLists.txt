@@ -26,6 +26,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU" OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 option(COVERAGE_ENABLED "Enable code coverage" FALSE)
+
 if(COVERAGE_ENABLED)
   add_compile_options(--coverage)
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
@@ -44,18 +45,19 @@ if(MSVC)
   )
 endif()
 
-################################################
-## Find  dependencies                         ##
-################################################
-## Find ament macros and libraries
+# ###############################################
+# # Find  dependencies                         ##
+# ###############################################
+# # Find ament macros and libraries
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 
-################################################
-## Declare ROS messages, services and actions ##
-################################################
+# ###############################################
+# # Declare ROS messages, services and actions ##
+# ###############################################
 set(service_files
+  "srv/CallAgent.srv"
   "srv/UserQueryResponse.srv"
 )
 set(action_files
@@ -68,17 +70,17 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   DEPENDENCIES std_msgs
 )
 
-###########
-## Build ##
-###########
+# ##########
+# # Build ##
+# ##########
 
-#############
-## Install ##
-#############
+# ############
+# # Install ##
+# ############
 
-#############
-## Testing ##
-#############
+# ############
+# # Testing ##
+# ############
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
 
@@ -87,9 +89,9 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-###################################
-## ament specific configuration ##
-###################################
+# ##################################
+# # ament specific configuration ##
+# ##################################
 ament_export_dependencies(
   rosidl_default_runtime
 )
