@@ -59,6 +59,8 @@ find_package(std_msgs REQUIRED)
 set(service_files
   "srv/CallAgent.srv"
   "srv/UserQueryResponse.srv"
+  "srv/RetrieveDocuments.srv"
+  "srv/StoreDocument.srv"
 )
 set(action_files
   "action/UserQueryResponse.action"

@@ -1,0 +1,12 @@
+# Service to retrieve documents from the RAG system
+
+# Input query to retrieve relevant documents
+string query
+# Number of documents to retrieve (default: 8)
+int32 k
+---
+# Retrieved documents with their metadata
+string status
+string message
+int32 total_results
+string results_json

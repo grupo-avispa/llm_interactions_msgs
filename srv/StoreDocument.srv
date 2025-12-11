@@ -1,0 +1,10 @@
+# Service to store a document in the RAG system
+
+# Text content to store
+string text
+# Optional metadata as JSON string
+string metadata_json
+---
+# Operation result
+bool success
+string message

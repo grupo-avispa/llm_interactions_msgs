@@ -1,92 +1,40 @@
 # llm_interactions_msgs
 
-This package defines custom ROS 2 action messages for interacting with language models in a ROS-based system.
+![ROS2](https://img.shields.io/badge/ros2-jazzy-blue?logo=ros&logoColor=white)
+![License](https://img.shields.io/github/license/grupo-avispa/llm_interactions_msgs)
 
-## Action Definition
+This package defines custom ROS 2 messages for interacting with language models in a ROS-based system.
 
-The `UserQueryResponse.action` consists of three sections: **request**, **response**, and **feedback**.
+## Overview
 
-### Request
+This package provides messages and services for communication with language models and RAG (Retrieval-Augmented Generation) systems.
 
-```plaintext
-string user_name        # Interacting user's name
-string user_query       # Input query from the user
-```
+## Actions (.action)
 
-### Response
+* [UserQueryResponse](action/UserQueryResponse.action): Action for user queries with feedback and response.
 
-```plaintext
-string response_text    # Generated response to the user's query
-float32 elapsed_time    # Time taken to generate the response (in seconds)
-```
+## Services (.srv)
 
-### Feedback
-
-```plaintext
-string status           # Status of the process (e.g., "completed", "failed")
-```
-
-## Usage
-
-This package is intended to be used as a dependency in nodes that require sending and receiving custom action messages.
-
-Example import in Python:
-
-```python
-from llm_interactions_msgs.action import UserQueryResponse
-```
-
-Example import in C++:
-
-```cpp
-#include "llm_interactions_msgs/action/user_query_response.hpp"
-```
-
-## Service Definition
-
-The `UserQueryResponse.srv` consists of two sections: **request** and **response**.
-
-### Request
-
-```plaintext
-string user_name        # Interacting user's name
-string user_query       # Input query from the user
-```
-### Response
-
-```plaintext
-string response_text    # Generated response to the user's query
-```
-
-### Example Usage
-
-This package is intended to be used as a dependency in nodes that require sending and receiving custom service messages.
-Example import in Python:
-
-```python
-from llm_interactions_msgs.srv import UserQueryResponse
-```
-
-Example import in C++:
-
-```cpp
-#include "llm_interactions_msgs/srv/user_query_response.hpp"
-```
-
-## Dependencies
-
-* ROS 2 (>= Humble)
-* `action_msgs`
-* `builtin_interfaces`
+* [CallAgent](srv/CallAgent.srv): Service to call an agent with a query.
+* [UserQueryResponse](srv/UserQueryResponse.srv): Service for user query responses.
+* [RetrieveDocuments](srv/RetrieveDocuments.srv): Service to retrieve relevant documents from the RAG system.
+* [StoreDocument](srv/StoreDocument.srv): Service to store a document in the RAG system.
 
 ## Installation
 
-Clone this package into your ROS 2 workspace:
+### Building from Source
+
+#### Dependencies
+
+- [Robot Operating System (ROS) 2](https://docs.ros.org/en/jazzy/) (middleware for robotics),
+
+#### Building
+
+To build from source, clone the latest version from the main repository into your colcon workspace and compile the package using
 
 ```bash
-cd ~/ros2_ws/src
-git clone <repository_url>
-cd ~/ros2_ws
-colcon build --packages-select llm_interactions_msgs --symlink-install
-source install/setup.bash
-```
+cd colcon_workspace/src
+git clone https://github.com/grupo-avispa/llm_interactions_msgs.git -b jazzy
+cd ../
+rosdep install -i --from-path src --rosdistro jazzy -y
+colcon build --symlink-install
