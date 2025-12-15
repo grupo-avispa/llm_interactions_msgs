@@ -56,18 +56,24 @@ find_package(std_msgs REQUIRED)
 # ###############################################
 # # Declare ROS messages, services and actions ##
 # ###############################################
+set(action_files
+  "action/UserQueryResponse.action"
+)
+
+set(message_files
+  "msg/Document.msg"
+)
+
 set(service_files
   "srv/CallAgent.srv"
   "srv/UserQueryResponse.srv"
   "srv/RetrieveDocuments.srv"
   "srv/StoreDocument.srv"
 )
-set(action_files
-  "action/UserQueryResponse.action"
-)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${action_files}
+  ${message_files}
   ${service_files}
   DEPENDENCIES std_msgs
 )

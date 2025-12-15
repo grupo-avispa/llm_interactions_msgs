@@ -5,8 +5,10 @@ string query
 # Number of documents to retrieve (default: 8)
 int32 k 8
 ---
-# Retrieved documents with their metadata
+# Response status
 string status
 string message
+# Total number of documents retrieved
 int32 total_results
-string results_json
+# Array of retrieved documents from ChromaDB
+Document[] results
