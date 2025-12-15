@@ -3,7 +3,7 @@
 # Input query to retrieve relevant documents
 string query
 # Number of documents to retrieve (default: 8)
-int32 k
+int32 k 8
 ---
 # Retrieved documents with their metadata
 string status
