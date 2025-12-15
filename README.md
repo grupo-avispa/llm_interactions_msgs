@@ -9,6 +9,10 @@ This package defines custom ROS 2 messages for interacting with language models 
 
 This package provides messages and services for communication with language models and RAG (Retrieval-Augmented Generation) systems.
 
+## Messages (.msg)
+
+* [Document](msg/Document.msg): Message representing a document chunk extracted from ChromaDB during RAG operations.
+
 ## Actions (.action)
 
 * [UserQueryResponse](action/UserQueryResponse.action): Action for user queries with feedback and response.
