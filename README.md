@@ -12,6 +12,7 @@ This package provides messages and services for communication with language mode
 ## Messages (.msg)
 
 * [Document](msg/Document.msg): Message representing a document chunk extracted from ChromaDB during RAG operations.
+* [Metadata](msg/Metadata.msg): Message containing metadata about a document, including source, node name, and node function.
 
 ## Actions (.action)
 

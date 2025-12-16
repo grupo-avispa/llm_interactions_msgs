@@ -7,7 +7,6 @@ int32 k 8
 ---
 # Response status
 string status
-string message
 # Total number of documents retrieved
 int32 total_results
 # Array of retrieved documents from ChromaDB

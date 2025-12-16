@@ -62,6 +62,7 @@ set(action_files
 
 set(message_files
   "msg/Document.msg"
+  "msg/Metadata.msg"
 )
 
 set(service_files

@@ -1,9 +1,7 @@
 # Service to store a document in the RAG system
 
-# Text content to store
-string text
-# Optional metadata as JSON string
-string metadata_json
+# Input document to store
+Document document
 ---
 # Operation result
 bool success
