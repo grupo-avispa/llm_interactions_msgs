@@ -4,6 +4,8 @@
 string query
 # Number of documents to retrieve (default: 8)
 int32 k 8
+# Optional metadata filters as JSON string
+string filters ''
 ---
 # Response status
 string status
