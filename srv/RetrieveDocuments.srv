@@ -6,6 +6,8 @@ string query
 int32 k 8
 # Optional metadata filters as JSON string
 string filters ''
+# Flag to indicate whether to perform refinement on retrieved documents
+bool refine_rag false
 ---
 # Response status
 string status
