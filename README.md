@@ -21,6 +21,7 @@ This package provides messages and services for communication with language mode
 ## Services (.srv)
 
 * [CallAgent](srv/CallAgent.srv): Service to call an agent with a query.
+* [GetDatabaseSize](srv/GetDatabaseSize.srv): Service to get the total number of documents stored in the RAG vector database.
 * [UserQueryResponse](srv/UserQueryResponse.srv): Service for user query responses.
 * [RetrieveDocuments](srv/RetrieveDocuments.srv): Service to retrieve relevant documents from the RAG system.
 * [StoreDocument](srv/StoreDocument.srv): Service to store a document in the RAG system.

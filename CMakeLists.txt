@@ -67,6 +67,7 @@ set(message_files
 
 set(service_files
   "srv/CallAgent.srv"
+  "srv/GetDatabaseSize.srv"
   "srv/UserQueryResponse.srv"
   "srv/RetrieveDocuments.srv"
   "srv/StoreDocument.srv"

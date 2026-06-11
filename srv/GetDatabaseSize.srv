@@ -1,0 +1,8 @@
+# Service to get the number of documents stored in the RAG database
+---
+# Total number of documents stored in the vector database
+int32 document_count
+# Whether the operation was successful
+bool success
+# Status message
+string message
