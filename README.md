@@ -2,6 +2,8 @@
 
 ![ROS2](https://img.shields.io/badge/ros2-jazzy-blue?logo=ros&logoColor=white)
 ![License](https://img.shields.io/github/license/grupo-avispa/llm_interactions_msgs)
+[![Build](https://github.com/grupo-avispa/llm_interactions_msgs/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/grupo-avispa/llm_interactions_msgs/actions/workflows/build.yml)
+
 
 This package defines custom ROS 2 messages for interacting with language models in a ROS-based system.
 
