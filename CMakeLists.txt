@@ -57,6 +57,7 @@ find_package(std_msgs REQUIRED)
 # # Declare ROS messages, services and actions ##
 # ###############################################
 set(action_files
+  "action/CallAgent.action"
   "action/UserQueryResponse.action"
 )
 

@@ -1,0 +1,19 @@
+# Goal
+# Query to send to the agent
+string query
+---
+# Result
+# Whether the agent completed the request successfully
+bool success
+# Result message or error description
+string message
+# The PDDL problem generated for this query, if any
+string problem
+# The plan generated for this query, if any
+string plan
+---
+# Feedback
+# Name of the workflow stage currently executing (e.g. "get_domain", "generate_problem")
+string stage
+# Human-readable detail about the current stage
+string detail

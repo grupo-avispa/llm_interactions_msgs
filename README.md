@@ -18,6 +18,7 @@ This package provides messages and services for communication with language mode
 
 ## Actions (.action)
 
+* [CallAgent](action/CallAgent.action): Action to call an agent with a query, with per-stage feedback, a rich result (problem/plan), and cancellation support.
 * [UserQueryResponse](action/UserQueryResponse.action): Action for user queries with feedback and response.
 
 ## Services (.srv)
